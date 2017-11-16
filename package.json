@@ -73,6 +73,8 @@
     "log4js": "^2.0.0",
     "moment": "^2.15.2",
     "parse-database-url": "^0.3.0",
+    "passport": "^0.4.0",
+    "passport-google-auth": "^1.0.2",
     "pg": "^7.4.0",
     "pkginfo": "^0.4.1",
     "prom-client": "^10.0.4",

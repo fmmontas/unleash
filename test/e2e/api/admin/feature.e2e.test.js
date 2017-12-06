@@ -50,7 +50,7 @@ test.serial('creates new feature toggle', async t => {
         .then(destroy);
 });
 
-test.serial('creates new feature toggle with createdBy', async t => {
+test.skip.serial('creates new feature toggle with createdBy', async t => {
     t.plan(1);
     const { request, destroy } = await setupApp('feature_api_serial');
     await request

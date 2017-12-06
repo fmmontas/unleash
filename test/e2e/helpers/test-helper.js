@@ -37,7 +37,11 @@ function createApp(databaseSchema = 'test') {
         .then(() => {
             db.destroy();
             const stores = createStores(options);
-            const app = getApp({ stores, eventBus });
+            const app = getApp({
+                stores,
+                eventBus,
+                adminAuthentication: 'none',
+            });
             return {
                 stores,
                 request: supertest(app),

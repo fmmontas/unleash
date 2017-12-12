@@ -11,17 +11,23 @@ test.serial('returns three feature toggles', async t => {
         .expect(200)
         .expect(res => {
             t.true(res.body.features.length === 3);
+            t.true(res.body.features[0].devOnly === false);
+            t.true(res.body.features[1].devOnly === false);
+            t.true(res.body.features[2].devOnly === false);
         })
         .then(destroy);
 });
 
 test.serial('gets a feature by name', async t => {
-    t.plan(0);
+    t.plan(1);
     const { request, destroy } = await setupApp('feature_api_serial');
     return request
         .get('/api/admin/features/featureX')
         .expect('Content-Type', /json/)
         .expect(200)
+        .expect(res => {
+            t.true(res.body.devOnly === false);
+        })
         .then(destroy);
 });
 
@@ -61,9 +67,11 @@ test.serial('creates new feature toggle with createdBy', async t => {
             strategies: [{ name: 'default' }],
         })
         .set('Cookie', ['username=ivaosthu'])
-        .set('Content-Type', 'application/json');
+        .set('Content-Type', 'application/json')
+        .expect(201);
     await request
         .get('/api/admin/events')
+        .expect('Content-Type', /json/)
         .expect(res => {
             t.true(res.body.events[0].createdBy === 'ivaosthu');
         })

@@ -1,0 +1,11 @@
+{
+  "defaultEnv": "test",
+  "test": {
+    "driver": "pg",
+    "user": "unleash_user",
+    "password": "password",
+    "host": "localhost",
+    "database": "unleash_test",
+    "schema": "test"
+  }
+}

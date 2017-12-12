@@ -1,0 +1,11 @@
+version: '2' 
+services:
+  db:
+    image: postgres:9
+    environment:
+      POSTGRES_USER: unleash_user
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_DB: unleash_test
+    ports:
+      - "5432:5432"

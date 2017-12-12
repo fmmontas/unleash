@@ -1,0 +1,9 @@
+---
+applications:
+- name: cf-nodejs
+  buildpack: nodejs-v1-6-12
+  memory: 512M
+  instances: 1
+  random-route: true
+  env:
+    DATABASE_URL: postgresql://postgres:unleash@baker-test.mia.ucloud.int:5432/unleash

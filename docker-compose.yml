@@ -6,6 +6,6 @@ services:
       POSTGRES_USER: unleash_user
       POSTGRES_PASSWORD: password
       PGDATA: /var/lib/postgresql/data/pgdata
-      POSTGRES_DB: unleash_test
+      POSTGRES_DB: unleash
     ports:
       - "5432:5432"

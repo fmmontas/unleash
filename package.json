@@ -71,6 +71,7 @@
     "install": "^0.10.1",
     "joi": "^13.0.1",
     "knex": "^0.14.0",
+    "lodash": "^4.17.4",
     "log4js": "^2.0.0",
     "moment": "^2.19.3",
     "parse-database-url": "^0.3.0",

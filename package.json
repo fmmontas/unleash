@@ -74,6 +74,7 @@
     "lodash": "^4.17.4",
     "log4js": "^2.0.0",
     "moment": "^2.19.3",
+    "murmurhash3js": "^3.0.1",
     "parse-database-url": "^0.3.0",
     "pg": "^7.4.0",
     "pkginfo": "^0.4.1",

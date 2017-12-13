@@ -82,7 +82,7 @@
     "prometheus-gc-stats": "^0.5.0",
     "response-time": "^2.3.2",
     "serve-favicon": "^2.3.0",
-    "unleash-frontend": "https://github.com/briancmorales/unleash-frontend/tarball/db51777f3089868c04e974b83aa773b893ab0c62",
+    "unleash-frontend": "https://github.com/briancmorales/unleash-frontend/tarball/7761020460d75376e7d4e83a47a9e50785aae536",
     "yallist": "^3.0.2",
     "yargs": "^10.0.3"
   },
